@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/BlackCurtains/Backoffice-NodeJs/issues"
   },
-  "homepage": "https://github.com/BlackCurtains/Backoffice-NodeJs#readme"
+  "homepage": "https://github.com/BlackCurtains/Backoffice-NodeJs#readme",
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  }
 }

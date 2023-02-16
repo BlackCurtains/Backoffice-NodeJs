@@ -1,0 +1,24 @@
+{
+  "name": "admin-backoffice",
+  "version": "1.0.0",
+  "description": "Proudly built with NodeJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlackCurtains/Backoffice-NodeJs.git"
+  },
+  "keywords": [
+    "NodeJs",
+    "and",
+    "Ejs"
+  ],
+  "author": "Alok Shukla From Unnao Uttar Pradesh!",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlackCurtains/Backoffice-NodeJs/issues"
+  },
+  "homepage": "https://github.com/BlackCurtains/Backoffice-NodeJs#readme"
+}

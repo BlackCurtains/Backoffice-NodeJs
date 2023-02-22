@@ -25,17 +25,24 @@ app.route('/backoffice-login')
   const dbConnection = require('./db/dbConnect');
   const UserModels = require("./models/UserModels");
 
-  if (!email || !password) {
-   return res.status(422).json({ error: "Enter your registered Email & Password" });
+  try {
+   if (!email || !password) {
+    return res.status(422).json({ error: "Enter Registered E-mail Address & Password" });
+   }
+
+   const Result = await UserModels.create({ email, password });
+   if (Result) {
+    return res.status(201).json({ status: `User ${getConst.STATUS_CREATED}`, resCode: `${getConst.STATUS_CREATED_CODE}` });
+   }
+  } catch (error) {
+   return res.status(412).json({ status: `${error.keyValue.email} Email ${getConst.ALREADY_EXIST}`, resCode: `${getConst.ALREADY_EXIST_CODE}` });
   }
 
-  const Result = await UserModels.create({ email, password });
-  if (Result) {
-   return res.json({ status: "User Created Successfully.", data: Result });
-  }
+
+
 
  })
 
 app.listen(port, () => {
- console.log(`Example app listening on port ${port}`)
+ console.log(`App Running At ${port}`)
 })
